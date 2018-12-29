@@ -1,0 +1,45 @@
+.disabled {
+                    pointer-events: none;
+                    cursor: default;
+                    color:powderblue;
+}
+
+.setfont{
+		font-size: 13px;
+}
+.background-color{
+	background-color:aquamarine
+}
+
+.formcss{
+	border:aquamarine solid 4px;
+	border-radius: 10px;
+	width: 700px;
+	margin: auto;
+	margin-top:10px;
+	background-color:aquamarine
+}
+
+.formcss2{
+	border:black solid 2px;
+	border-radius: 10px;
+	width: 700px;
+	margin: auto;
+	margin-top:10px;
+	background-color:white
+}
+
+.formcss1{
+	color: red;
+	font-size:20px;
+	text-decoration:underline
+}
+
+.formqldt{
+	border: aquamarine solid 2px;
+	border-radius: 10px;
+	width:900px;
+	margin: auto;
+	margin-top:10px;
+	background-color:aquamarine
+}
