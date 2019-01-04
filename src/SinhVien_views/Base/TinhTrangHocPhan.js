@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import {connect} from 'react-redux';
+import {fetchTinhTrangHocPhanDatas} from '../../actions/fetchdata';
+
 
 class ThongTinCaNhan extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      users: [],
+      store: []
+    }
+  }
+  componentDidMount(){
+    const {DangKyHocPhandata} = this.props;
+
+    this.props.fetchTinhTrangHocPhanDatas();
+};
   render() {
+  const {DangKyHocPhandata} = this.props;
     return (
-      <div>
  <div className="backgroundedit">
      <table class="table table-bordered">
          <thead class="setfont">
@@ -23,159 +39,36 @@ class ThongTinCaNhan extends Component {
              </tr>
          </thead>
          <tbody>
+         {
+          DangKyHocPhandata.map(user =>
              <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><a href="/SinhVien/TinhTrangHocPhan" class="disabled">Đăng kí</a></td>
+                 <td>{user.id}</td>
+                 <td>{user.MaLHP}</td>
+                 <td>{user.name}</td>
+                 <td>{user.GiangVien}</td>
+                 <td>{user.ThoiKhoaBieu}</td>
+                 <td>{user.TuanHoc}</td>
+                 <td>{user.TuanHoc}</td>
+                 <td>{user.Loai}</td>
+                 <td>{user.HocPhi}</td>
+                 <td>{user.TinhTrang}</td>
+                 {
+                   (user.TinhTrang == '60/60') ? (
+                     <td><a href="#" class="disabled">Đăng kí</a></td>
+                   ) : (
+                      <td><a onClick={(e) => this.DangKy(user)}>Đăng kí</a></td>
+                   )
+                 }
              </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link>
-                 </td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link>
-                 </td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link>
-                 </td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link></td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link></td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><a href="#" class="disabled">Đăng kí</a></td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link></td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><a href="#" class="disabled">Đăng kí</a></td>
-             </tr>
-             <tr>
-                 <td>1</td>
-                 <td>000001</td>
-                 <td>Chương trình dịch</td>
-                 <td>2</td>
-                 <td>Nguyễn Văn A</td>
-                 <td>T5: 2-5</td>
-                 <td>3-10</td>
-                 <td>Tùy chọn</td>
-                 <td>500.000</td>
-                 <td>60/60</td>
-                 <td><Link to="/SinhVien/DangKyHocPhan">
-                 Đăng kí
-                 </Link></td>
-             </tr>
+ )}
          </tbody>
      </table>
  </div>
-        </div>
         );
   }
 }
+const mapStateToProps = state => ({
+  DangKyHocPhandata: state.datas.items,
+})
 
-export default ThongTinCaNhan;
+export default connect(mapStateToProps,{fetchTinhTrangHocPhanDatas}) (ThongTinCaNhan);

@@ -1,11 +1,63 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-
+import Popup from "reactjs-popup";
+import axios from "axios";
+import {connect} from 'react-redux';
+import {fetchTinhTrangHocPhanDatas,fetchHocPhanDangKyDatas} from '../../actions/fetchdata';
+import {postHocPhanDaChon} from '../../actions/postdata';
+import {deleteHocPhanDaChon} from '../../actions/deletedata';
 class ThongTinCaNhan extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      price: 0,
+      open: false,
+      rerender: false
+    }
+}
+  componentDidMount(){
+    const {DangKyHocPhandata} = this.props;
+
+    this.props.fetchTinhTrangHocPhanDatas();
+    this.props.fetchHocPhanDangKyDatas();
+
+};
+ componentWillReceiveProps(nextProps) {
+   const {HocphanDaChon: nextHocPhanDaChon} = nextProps;
+
+   if(nextHocPhanDaChon !== this.props.HocphanDaChon) {
+     this.props.fetchHocPhanDangKyDatas();
+   }
+ }
+ openModal = () => {
+    this.setState({open: true})
+  }
+  closeModal = () => {
+    this.setState({ open: false})
+  }
+  DangKy = dangky => {
+    const{HocphanDaChon} = this.props;
+    if( HocphanDaChon.find(user => user.dangky.id == dangky.id) == null){
+    this.props.postHocPhanDaChon(dangky);
+  }
+  }
+  deleteDangKy = id => {
+      this.props.deleteHocPhanDaChon(id);
+  }
+  sum = (list) => {
+   let sum = 0;
+    list.map(p =>
+      sum = sum + parseInt(p.dangky.HocPhi.replace(".", ""))
+    )
+    return sum
+  }
   render() {
+  const {DangKyHocPhandata} = this.props;
+  const{HocphanDaChon} = this.props;
+  const users1 = this.state.users1;
     return (
       <div className="backgroundedit">
+
                       <table class="table table-bordered" >
                               <thead class="setfont">
                                   <tr>
@@ -23,118 +75,46 @@ class ThongTinCaNhan extends Component {
                                   </tr>
                               </thead>
                               <tbody>
+                              {
+                                HocphanDaChon.map(user =>
                                   <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
+                                  <td>{HocphanDaChon.indexOf(user) + 1}</td>
+                                  <td>{user.dangky.MaLHP}</td>
+                                  <td>{user.dangky.name}</td>
+                                  <td>{user.dangky.GiangVien}</td>
+                                  <td>{user.dangky.ThoiKhoaBieu}</td>
+                                  <td>{user.dangky.TuanHoc}</td>
+                                  <td>{user.dangky.TuanHoc}</td>
+                                  <td>{user.dangky.Loai}</td>
+                                  <td>{user.dangky.HocPhi}</td>
+                                  <td>{user.dangky.TinhTrang}</td>
+                                  <td><a onClick={(e) => this.deleteDangKy(user.id)}>Xoá</a></td>
                                   </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>000001</td>
-                                      <td>Chương trình dịch</td>
-                                      <td>2</td>
-                                      <td>Nguyễn Văn A</td>
-                                      <td>T5: 2-5</td>
-                                      <td>3-10</td>
-                                      <td>Tùy chọn</td>
-                                      <td>500.000</td>
-                                      <td>60/60</td>
-                                      <td><a href="#">Xóa</a></td>
-                                  </tr>
+                                )}
                               </tbody>
                           </table>
                           <div class="row">
 
-                              <div class="col-md-6"><h4 class="setcolor">Tổng số tín chỉ: 6/10  Học phí: 3000.000 </h4></div>
+                              <div class="col-md-6"><h4 class="setcolor">Tổng số tín chỉ: {HocphanDaChon.length}/10  Học phí: {this.sum(HocphanDaChon)} VND</h4></div>
                               <div class="col-md-4"></div>
                           </div>
-
-                          <div class="modal">
-                              <input id="modal" type="checkbox" name="modal" tab-index="1"></input>
-                              <label for="modal" >Đăng kí</label>
-                              <div class="modal__overlay">
-                                  <div class="modal__box">
-                                      <label for="modal">&#10006;</label>
-                                      <h2>Are you sure ?</h2>
-                                      <p>Bạn có muốn xác nhận đăng ký những học phần vừa chọn không ?</p>
-                                      <div className = "flexcontainer" >
-                                      <div className="editwidthbutton">
-                                      <Link to = "/SinhVien/HocPhanDangHoc">
-                                      <button class="btn btn-outline-dark btn-block">yes</button>
-                                      </Link>
-                                      </div>
-
-                                      <div className="editwidthbutton">
-                                      <Link to = "/SinhVien/DangKyHocPhan">
-                                      <button class="btn btn-outline-dark btn-block">no</button>
-                                      </Link>
-                                      </div>
-
-                                      </div>
-                                  </div>
-                              </div>
+                          <div className="dangky-button-padding">
+                           <button className="btn btn-primary" onClick={this.openModal}>Đăng Ký</button>
+                          <Popup
+                            className="box-popup"
+                             open={this.state.open}
+                             closeOnDocumentClick
+                             onClose={this.closeModal}
+                          >
+                          <div className="alert-box"><h2> Bạn có chắc muốn thực hiện điều này ?</h2></div>
+                          <div className="flexcontainer bottom-box">
+                          <Link to = "/SinhVien/TinhTrangHocPhan">
+                          <button class="button-size padding-left btn btn-primary">OK</button>
+                          </Link>
+                          <button className="button-size btn btn-danger" onClick={this.closeModal}>close</button>
                           </div>
-
+                          </Popup>
+                          </div>
                           <br/>
                           <br/>
                           <br/>
@@ -156,89 +136,40 @@ class ThongTinCaNhan extends Component {
                                       </tr>
                                   </thead>
                                   <tbody>
+                                  {
+                                    DangKyHocPhandata.map(user =>{
+                                    while(DangKyHocPhandata.indexOf(user) <= 4){
+                                    return (
                                       <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>60/60</td>
-                                          <td><a href="#" class="disabled">Đăng kí</a></td>
+                                      <td>{DangKyHocPhandata.indexOf(user) + 1  }</td>
+                                      <td>{user.MaLHP}</td>
+                                      <td>{user.name}</td>
+                                      <td>{user.GiangVien}</td>
+                                      <td>{user.ThoiKhoaBieu}</td>
+                                      <td>{user.TuanHoc}</td>
+                                      <td>{user.TuanHoc}</td>
+                                      <td>{user.Loai}</td>
+                                      <td>{user.HocPhi}</td>
+                                      <td>{user.TinhTrang}</td>
+                                       {
+                                         (user.TinhTrang == '60/60') ? (
+                                           <td><a href="#" class="disabled">Đăng kí</a></td>
+                                         ) : (
+                                            <td><a onClick={(e) => this.DangKy(user)}>Đăng kí</a></td>
+                                         )
+                                       }
                                       </tr>
-                                      <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>40/60</td>
-                                          <td><a href="#">Đăng kí</a></td>
-                                      </tr>
-                                      <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>60/60</td>
-                                          <td><a href="#" class="disabled">Đăng kí</a></td>
-                                      </tr>
-                                      <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>40/60</td>
-                                          <td><a href="#">Đăng kí</a></td>
-                                      </tr>
-                                      <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>60/60</td>
-                                          <td><a href="#" class="disabled">Đăng kí</a></td>
-                                      </tr>
-                                      <tr>
-                                          <td>1</td>
-                                          <td>000001</td>
-                                          <td>Chương trình dịch</td>
-                                          <td>2</td>
-                                          <td>Nguyễn Văn A</td>
-                                          <td>T5: 2-5</td>
-                                          <td>3-10</td>
-                                          <td>Tùy chọn</td>
-                                          <td>500.000</td>
-                                          <td>40/60</td>
-                                          <td><a href="#">Đăng kí</a></td>
-                                      </tr>
+                                    )
+                                    }})}
                                   </tbody>
                               </table>
           </div>
         );
   }
 }
+const mapStateToProps = state => ({
+  DangKyHocPhandata: state.datas.items,
+  HocphanDaChon: state.datas_chose.items,
+})
 
-export default ThongTinCaNhan;
+export default connect(mapStateToProps,{fetchTinhTrangHocPhanDatas,fetchHocPhanDangKyDatas,postHocPhanDaChon,deleteHocPhanDaChon}) (ThongTinCaNhan);

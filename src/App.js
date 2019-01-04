@@ -3,6 +3,8 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 // import { renderRoutes } from 'react-router-config';
 import Loadable from 'react-loadable';
 import './App.scss';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
@@ -50,6 +52,7 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
+      <Provider store={store}>
           <Switch>
             <Route exact path="/" name="Login Page" component={Login} />
             <Route exact path="/register" name="Register Page" component={Register} />
@@ -60,6 +63,7 @@ class App extends Component {
             <Route  path="/SinhVien" name="Home" component={SinhVienDefaultLayout} />
             <Route  path="/GiangVien" name="Home" component={GiangVienDefaultLayout} />
           </Switch>
+        </Provider>
       </HashRouter>
     );
   }

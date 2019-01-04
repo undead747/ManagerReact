@@ -30,7 +30,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>
@@ -41,7 +41,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>
@@ -52,7 +52,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>
@@ -63,7 +63,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>
@@ -74,7 +74,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>
@@ -85,7 +85,7 @@ class ThongTinCaNhan extends Component {
                              <td>Chương trình dịch</td>
                              <td>20/Dec/2018; 7h00</td>
                              <td>
-                             <Link to="/SinhVien/ChuanBiThi">
+                             <Link to="/SinhVien/thi">
                              Thi ngay
                              </Link>
                              </td>

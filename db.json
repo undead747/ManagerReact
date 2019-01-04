@@ -1,0 +1,377 @@
+{
+  "HocPhanDangHoc": [
+    {
+      "id": 1,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "LopHocPhan": "1111",
+      "SoTinChi": "2",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "LichThi": "20/Dec/2018; 7h00",
+      "Loai": "Tuy Chon"
+    },
+    {
+      "id": 2,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "LopHocPhan": "1111",
+      "SoTinChi": "2",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "LichThi": "20/Dec/2018; 7h00",
+      "Loai": "Tuy Chon"
+    },
+    {
+      "id": 3,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "LopHocPhan": "1111",
+      "SoTinChi": "2",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "LichThi": "20/Dec/2018; 7h00",
+      "Loai": "Tuy Chon"
+    },
+    {
+      "id": 4,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "LopHocPhan": "1111",
+      "SoTinChi": "2",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "LichThi": "20/Dec/2018; 7h00",
+      "Loai": "Tuy Chon"
+    },
+    {
+      "id": 5,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "LopHocPhan": "1111",
+      "SoTinChi": "2",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "LichThi": "20/Dec/2018; 7h00",
+      "Loai": "Tuy Chon"
+    }
+  ],
+  "TinhTrangHocPhan": [
+    {
+      "id": 1,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "50/60"
+    },
+    {
+      "id": 2,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "20/60"
+    },
+    {
+      "id": 3,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 4,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "40/60"
+    },
+    {
+      "id": 5,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 6,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    },
+    {
+      "id": 7,
+      "MaLHP": "json-server",
+      "name": "typicode",
+      "number": "1111",
+      "GiangVien": "ABC",
+      "ThoiKhoaBieu": "T5: 2-5",
+      "TuanHoc": "3-10",
+      "Loai": "Tuy Chon",
+      "HocPhi": "500.000",
+      "TinhTrang": "60/60"
+    }
+  ],
+  "DangKy": [
+    {
+      "dangky": {
+        "id": 1,
+        "MaLHP": "json-server",
+        "name": "typicode",
+        "number": "1111",
+        "GiangVien": "ABC",
+        "ThoiKhoaBieu": "T5: 2-5",
+        "TuanHoc": "3-10",
+        "Loai": "Tuy Chon",
+        "HocPhi": "500.000",
+        "TinhTrang": "50/60"
+      },
+      "id": 1
+    },
+    {
+      "dangky": {
+        "id": 2,
+        "MaLHP": "json-server",
+        "name": "typicode",
+        "number": "1111",
+        "GiangVien": "ABC",
+        "ThoiKhoaBieu": "T5: 2-5",
+        "TuanHoc": "3-10",
+        "Loai": "Tuy Chon",
+        "HocPhi": "500.000",
+        "TinhTrang": "20/60"
+      },
+      "id": 2
+    },
+    {
+      "dangky": {
+        "id": 4,
+        "MaLHP": "json-server",
+        "name": "typicode",
+        "number": "1111",
+        "GiangVien": "ABC",
+        "ThoiKhoaBieu": "T5: 2-5",
+        "TuanHoc": "3-10",
+        "Loai": "Tuy Chon",
+        "HocPhi": "500.000",
+        "TinhTrang": "40/60"
+      },
+      "id": 3
+    }
+  ],
+  "DeThi": [
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    },
+    {
+      "id": 1,
+      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
+      "A": "Phát hiện được lỗi ngữ nghĩa",
+      "B": "Phát hiện được lỗi cú pháp",
+      "C": "Thông báo lỗi cú pháp",
+      "D": "Tạo được chương trình dịch"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

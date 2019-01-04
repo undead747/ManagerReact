@@ -1,0 +1,7 @@
+// load du lieu
+export const FETCH_DATA = 'FETCH_DATA';
+export const FETCH_CHOSE_DATA = 'FETCH_CHOSE_DATA';
+export const FETCH_HOCPHANDANGHOC_DATA = 'FETCH_HOCPHANDANGHOC_DATA';
+export const FETCH_DETHI_DATA = 'FETCH_DETHI_DATA';
+export const POST_DATA = 'POST_DATA';
+export const DELETE_DATA = 'DELETE_DATA';
