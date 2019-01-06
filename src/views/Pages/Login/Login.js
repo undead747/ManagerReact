@@ -10,6 +10,8 @@ class Login extends Component {
       Username:'',
       Password:'',
       redirect: false,
+      redirect1: false,
+      redirect2: false,
     }
   };
   updateUsername = (e) => {
@@ -29,11 +31,26 @@ class Login extends Component {
         redirect: true
       })
     }
+    if(this.state.Username == 'GiangVien' && this.state.Password == '12345678'){
+      this.setState({
+        redirect1: true
+      })
+    }
+    if(this.state.Username == 'Admin' && this.state.Password == '12345678'){
+      this.setState({
+        redirect2: true
+      })
+    }
   }
   renderRedirect = () => {
     if (this.state.redirect) {
       return <Redirect to='/SinhVien/ThongTinCaNhan' />
-    }else{
+    }else if(this.state.redirect1){
+      return <Redirect to='/GiangVien' />
+    }else if(this.state.redirect2){
+      return <Redirect to='/Admin' />
+    }
+    else{
       return <Redirect to='/' />
     }
 }

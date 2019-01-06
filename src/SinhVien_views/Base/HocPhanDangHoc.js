@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import {fetchHocPhanDangHocDatas} from '../../actions/fetchdata';
+import {fetchHocPhanDangHocDatas,fetchHocPhanDangKyDatas} from '../../actions/fetchdata';
 import {connect} from 'react-redux';
 class ThongTinCaNhan extends Component {
   componentDidMount(){
     this.props.fetchHocPhanDangHocDatas();
+    this.props.fetchHocPhanDangKyDatas();
   }
   render() {
     const {data} = this.props;
+    const {HocphanDaChon} = this.props;
     return (
       <div  className="backgroundedit">
 
@@ -37,20 +39,20 @@ class ThongTinCaNhan extends Component {
           </thead>
           <tbody>
           {
-            data.map(data =>
+            HocphanDaChon.map(user =>
               <tr>
-                  <td>{data.id}</td>
-                  <td>{data.MaLHP}</td>
-                  <td>{data.name}</td>
-                  <td>{data.LopHocPhan}</td>
-                  <td>{data.SoTinChi}</td>
-                  <td>{data.GiangVien}</td>
-                  <td>{data.ThoiKhoaBieu}</td>
-                  <td>{data.TuanHoc}</td>
-                  <td>{data.Loai}</td>
+              <td>{HocphanDaChon.indexOf(user) + 1}</td>
+              <td>{user.dangky.MaLHP}</td>
+              <td>{user.dangky.name}</td>
+              <td>{user.dangky.number}</td>
+              <td>{user.dangky.ThoiKhoaBieu}</td>
+              <td>{user.dangky.TuanHoc}</td>
+              <td>{user.dangky.TuanHoc}</td>
+              <td>{user.dangky.Loai}</td>
+              <td>{user.dangky.HocPhi}</td>
+              <td>{user.dangky.TinhTrang}</td>
               </tr>
-            )
-            }
+            )}
           </tbody>
       </table>
   </div>
@@ -98,6 +100,7 @@ class ThongTinCaNhan extends Component {
 }
 const mapStateToProps = state => ({
   data: state.datas_study.items,
+  HocphanDaChon: state.datas_chose.items,
 })
 
-export default connect (mapStateToProps,{fetchHocPhanDangHocDatas}) (ThongTinCaNhan);
+export default connect (mapStateToProps,{fetchHocPhanDangHocDatas,fetchHocPhanDangKyDatas}) (ThongTinCaNhan);

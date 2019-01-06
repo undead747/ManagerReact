@@ -20,7 +20,7 @@ export default {
     },
        {
           name: 'Lịch học',
-          url: '/SinhVien/ThiVaDiemThi',
+          url: '/SinhVien/LichHoc',
           icon: 'icon-control-play',
         },
         {
@@ -45,7 +45,7 @@ export default {
     },
     {
       name: 'Điểm thi',
-      url: '/SinhVien/DiemThi',
+      url: '/SinhVien/KetQua',
       icon: 'icon-check',
     },
 

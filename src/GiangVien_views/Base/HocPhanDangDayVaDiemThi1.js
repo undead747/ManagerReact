@@ -17,12 +17,11 @@ class ThongTinCaNhan extends Component {
                              <th>Lớp học phần</th>
                              <th>Số tín chỉ</th>
                              <th>Lịch dạy</th>
-
                          </tr>
                      </thead>
                      <tbody>
                          <tr>
-                             <td><a href="/#/GiangVien/DanhSachLop">1</a></td>
+                             <td><a href="/#/GiangVien/DiemThiTheoLop">1</a></td>
                              <td>Hóa đại cương</td>
                              <td>00001</td>
                              <td>15NH15</td>

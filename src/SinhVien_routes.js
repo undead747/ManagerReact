@@ -11,6 +11,7 @@ const ChuanBiThi = React.lazy(() => import('./SinhVien_views/Base/ChuanBiThi.js'
 const KetQuaThi = React.lazy(() => import('./SinhVien_views/Base/KetQuaThi.js'));
 const Thi = React.lazy(() => import('./SinhVien_views/Base/thi.js'));
 const ThiVaDiemThi = React.lazy(() => import('./SinhVien_views/Base/ThiVaDiemThi.js'));
+const KetQua = React.lazy(() => import('./SinhVien_views/Base/KetQua.js'));
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 
 const routes = [
@@ -24,7 +25,8 @@ const routes = [
   { path: '/SinhVien/ChuanBiThi', name: 'Lịch Thi', component: ChuanBiThi },
   { path: '/SinhVien/KetQuaThi', name: 'Kết Quả Thi', component: KetQuaThi },
   { path: '/SinhVien/Thi', name: 'Thi', component: Thi },
-  { path: '/SinhVien/ThiVaDiemThi', name: 'Kết Quả Thi', component: ThiVaDiemThi },
+  { path: '/SinhVien/LichHoc', name: 'Lịch Học', component: ThiVaDiemThi },
+  { path: '/SinhVien/KetQua', name: 'Kết Quả Thi', component: KetQua }
 ];
 
 export default routes;

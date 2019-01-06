@@ -26,6 +26,12 @@ const GiangVienDefaultLayout = Loadable({
   loading
 });
 
+// Admin Containers
+const AdminDefaultLayout = Loadable({
+  loader: () => import('./containers/AdminDefaultLayout'),
+  loading
+});
+
 // Pages
 const Login = Loadable({
   loader: () => import('./views/Pages/Login'),
@@ -62,6 +68,7 @@ class App extends Component {
             <Route  path="/a" name="Home" component={DefaultLayout} />
             <Route  path="/SinhVien" name="Home" component={SinhVienDefaultLayout} />
             <Route  path="/GiangVien" name="Home" component={GiangVienDefaultLayout} />
+            <Route  path="/Admin" name="Home" component={AdminDefaultLayout} />
           </Switch>
         </Provider>
       </HashRouter>

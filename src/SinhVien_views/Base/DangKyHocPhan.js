@@ -108,7 +108,7 @@ class ThongTinCaNhan extends Component {
                           >
                           <div className="alert-box"><h2> Bạn có chắc muốn thực hiện điều này ?</h2></div>
                           <div className="flexcontainer bottom-box">
-                          <Link to = "/SinhVien/TinhTrangHocPhan">
+                          <Link to = "/SinhVien/HocPhanDangHoc">
                           <button class="button-size padding-left btn btn-primary">OK</button>
                           </Link>
                           <button className="button-size btn btn-danger" onClick={this.closeModal}>close</button>

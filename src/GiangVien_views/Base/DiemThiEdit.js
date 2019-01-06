@@ -20,7 +20,7 @@ class ThongTinCaNhan extends Component {
 
        <div class="row">
            <div class="col-md-10"></div>
-               <a href="#" class="btn btn-Info btn-lg">
+               <a href="/#/GiangVien/DiemThiTheoLop" class="btn btn-Info btn-lg">
                    <i class="glyphicon glyphicon-save"></i>  Save
                </a>
        </div>

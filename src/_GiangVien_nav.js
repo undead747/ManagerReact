@@ -9,32 +9,24 @@ export default {
       },
     },
     {
-      name: 'Quản lý học phần',
-      url: '/a/base',
-      icon: 'icon-briefcase',
-      children: [
-        {
-          name: 'Danh sách học phần',
-          url: '/a/base/breadcrumbs',
-          icon: 'icon-control-play',
-        },
-        {
-          name: 'Kiểm tra và thi',
-          url: '/a/base/breadcrumbs',
-          icon: 'icon-control-play',
-        },
-      ],
-    },
-    {
-      name: 'Quản lý đề thi',
-      url: '/a/base/breadcrumbs',
+      name: 'Danh Sách Lớp',
+      url: '/GiangVien/HocPhanDangDayVaDiemThi',
       icon: 'icon-briefcase',
     },
     {
       name: 'Điểm thi',
-      url: '/a/base/breadcrumbs',
+      url: '/GiangVien/HocPhanDangDayVaDiemThi1',
       icon: 'icon-check',
     },
-
+    {
+      name: 'kiểm tra và thi',
+      url: '/GiangVien/KiemTraVaThi',
+      icon: 'icon-check',
+    },
+    {
+      name: 'quản lý đề thi',
+      url: '/GiangVien/QuanLyDeThi',
+      icon: 'icon-check',
+    },
   ]
 }

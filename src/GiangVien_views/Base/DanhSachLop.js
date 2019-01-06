@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Link} from 'react-router-dom';
+import { Route, Redirect } from 'react-router'
 
 class ThongTinCaNhan extends Component {
+
   render() {
     return (
       <div className="backgroundedit">
@@ -37,7 +40,7 @@ class ThongTinCaNhan extends Component {
                      </tr>
                  </thead>
                  <tbody>
-                     <tr>
+                     <tr onClick={<Redirect to="/#/GiangVien/DanhSachLop"/>}>
                          <td>1</td>
                          <td>102150200</td>
                          <td>Nguyễn Văn A</td>

@@ -30,6 +30,45 @@ class ThongTinCaNhan extends Component {
   closeModal1 = () => {
     this.setState({ open1: false})
   }
+
+  setmultiple = (object) => {
+    let count = 0;
+     object.map(p =>{
+       if(p.selectedOption > 0) count = count + 1;
+     }
+     )
+   if( count > 1) return(
+      object.map(p =>
+       <div style={{fontSize: '18px'}}>
+          <div className="radio">
+           <label>
+             <input type="checkbox" />
+             {p.dapan}
+            <span className="spaceding">
+              {p.selectedOption}%
+             </span>
+           </label>
+         </div>
+      </div>
+     )
+   )
+   else return(
+     object.map(p =>
+      <div style={{fontSize: '18px'}}>
+         <div className="radio">
+          <label>
+            <input type="radio"/>
+            {p.dapan}
+           <span className="spaceding">
+             {p.selectedOption}%
+            </span>
+          </label>
+        </div>
+     </div>
+    )
+   )
+   }
+
   render() {
     const {data} = this.props;
     const divStyle = {
@@ -72,32 +111,20 @@ class ThongTinCaNhan extends Component {
          <h3 style={divStyle}><strong> ĐỀ THI CUỐI KỲ MÔN CHƯƠNG TRÌNH DỊCH</strong></h3>
          <div class="container mt-3">
          {
-           data.map(user =>
-       		<div class="alert alert-info">
-               <h5>Câu {data.indexOf(user) + 1}: {user.question}</h5>
-               <ul>
-               <label>
-                <input type="radio" value="option1" checked={false} />
-                {user.A}
-               </label>
-               <br/>
-               <label>
-                <input type="radio" value="option1" checked={false} />
-                {user.B}
-               </label>
-               <br/>
-               <label>
-                <input type="radio" value="option1" checked={true} />
-                {user.C}
-               </label>
-               <br/>
-               <label>
-                <input type="radio" value="option1" checked={false} />
-                {user.D}
-               </label>
-               </ul>
-            </div>
-       )}
+           data.map(p =>
+             p.cauhoi.map(t =>
+         <form  class="formcss" >
+             <div class="row">
+                 <h4 class="col-md-9">{t.cauhoi}</h4>
+                 <p style={{color: 'red', fontSize: '20px'}}>{t.level}</p> &nbsp; &nbsp;
+                 <i className="fas fa-pen" style={{fontSize: '24px', color: 'rgb(26, 236, 26)'}} /> &nbsp; &nbsp;
+                 <i className="fas fa-chair" style={{fontSize: '24px', color: 'red'}} />
+             </div>
+             {this.setmultiple(t.dapan)}
+
+         </form>
+
+        ))}
             <div align="center">
                <div>
                <button class="btn btn-danger" onClick={this.openModal1}>Nộp bài</button>

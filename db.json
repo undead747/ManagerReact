@@ -273,95 +273,144 @@
         "TinhTrang": "20/60"
       },
       "id": 2
-    },
-    {
-      "dangky": {
-        "id": 4,
-        "MaLHP": "json-server",
-        "name": "typicode",
-        "number": "1111",
-        "GiangVien": "ABC",
-        "ThoiKhoaBieu": "T5: 2-5",
-        "TuanHoc": "3-10",
-        "Loai": "Tuy Chon",
-        "HocPhi": "500.000",
-        "TinhTrang": "40/60"
-      },
-      "id": 3
     }
   ],
   "DeThi": [
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "qqqq",
+          "dapan": [
+            {
+              "dapan": "qqq",
+              "selectedOption": "25"
+            },
+            {
+              "dapan": "qqqq",
+              "selectedOption": "100"
+            }
+          ],
+          "level": "khó"
+        }
+      ],
+      "id": 1
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "Toi la ai",
+          "dapan": [],
+          "level": "vừa"
+        }
+      ],
+      "id": 2
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "Toi la ai",
+          "dapan": [
+            {
+              "dapan": "aaaaaa",
+              "selectedOption": "100"
+            },
+            {
+              "dapan": "aaa",
+              "selectedOption": 0
+            },
+            {
+              "dapan": "aaa",
+              "selectedOption": 0
+            }
+          ],
+          "level": "vừa"
+        }
+      ],
+      "id": 3
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "aaaa",
+          "dapan": [
+            {
+              "dapan": "aaa",
+              "selectedOption": 0
+            },
+            {
+              "dapan": "aaaa",
+              "selectedOption": "100"
+            },
+            {
+              "dapan": "bbbb",
+              "selectedOption": 0
+            }
+          ],
+          "level": "khó"
+        }
+      ],
+      "id": 4
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "aaaaa",
+          "dapan": [
+            {
+              "dapan": "",
+              "selectedOption": 0
+            },
+            {
+              "dapan": "",
+              "selectedOption": "100"
+            },
+            {
+              "dapan": "",
+              "selectedOption": "75"
+            }
+          ],
+          "level": "vừa"
+        }
+      ],
+      "id": 5
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "aaa",
+          "dapan": [
+            {
+              "dapan": "aaa",
+              "selectedOption": "50"
+            },
+            {
+              "dapan": "aaa",
+              "selectedOption": "25"
+            }
+          ],
+          "level": "khó"
+        }
+      ],
+      "id": 6
     },
     {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
-    },
-    {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
-    },
-    {
-      "id": 1,
-      "question": "Chương trình dịch không có khả năng nào trong các khả năng sau?",
-      "A": "Phát hiện được lỗi ngữ nghĩa",
-      "B": "Phát hiện được lỗi cú pháp",
-      "C": "Thông báo lỗi cú pháp",
-      "D": "Tạo được chương trình dịch"
+      "cauhoi": [
+        {
+          "cauhoi": "aaa",
+          "dapan": [
+            {
+              "dapan": "aaa",
+              "selectedOption": "50"
+            },
+            {
+              "dapan": "aaa",
+              "selectedOption": "50"
+            }
+          ],
+          "level": "khó"
+        }
+      ],
+      "id": 7
     }
   ],
   "comments": [
